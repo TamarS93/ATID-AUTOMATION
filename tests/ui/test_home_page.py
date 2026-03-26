@@ -1,10 +1,8 @@
 from pages.home_page import HomePage
 
-
 def test_home_page_loads_successfully(driver, base_url):
     home_page = HomePage(driver, base_url)
-    home_page.wait_for_home
-    _page_to_load()
+    home_page.wait_for_home_page_to_load()
 
     assert home_page.is_main_heading_displayed(), "Main heading is not displayed on the Home page."
 
